@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - appmodel</title>
+    <link rel="stylesheet" href="~/skeleton/skeleton.css" />
+    <link rel="stylesheet" href="~/metro/css/metro-all.css" />
+    <link rel="stylesheet" href="~/metro/js/metro.js" />
+    <link rel="stylesheet" href="~/metro/mif/metro.svj" />
+
+</head>
+<body>
+    <header>
+        <ul class="h-menu">
+            <li><a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+
+        <li>
+            <a class="nav-link text-dark" asp-area="" asp-controller="movies" asp-action="">Movies</a>
+        </li>
+        <li> <a class="nav-link text-dark" asp-area="" asp-controller="authors" asp-action="">Authors</a></li>
+        
+
+           
+            <li><partial name="_LoginPartial" /></li>
+
+        </ul>
+        
+
+    </header>
+        
+      
+               
+                   
+       
+   
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+   
+        <div data-role="carousel" style="margin: auto;" data-width="80%" class=" cell-md-4 text-center"
+         data-effect="slide" 
+    data-period="2000"
+         data-duration="1000"
+         data-auto-start="true"
+         data-effect-func="easeOutBounce">
+        <div class="slide" style="width: 100%" data-cover="images/a.jpg"></div>
+        <div class="slide" data-cover="images/b.jpg"></div>
+        
+    </div>
+    
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2023 - appmodel - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/skeleton/skeleton.min.css" ></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/metro/css/metro-all.css"></script>
+    <script src="~/metro/js/metro.js"></script>
+    <script src="~/metro/mif/metro.svj"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

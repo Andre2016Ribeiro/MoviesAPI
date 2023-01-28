@@ -1,0 +1,35 @@
+﻿@model appmodel.Models.movie
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+
+
+
+<div class="card" style="background-color:lightyellow;border-radius:1em; box-shadow:10px 5px 5px black; ">
+    <div class="card-header">
+        <h1>Details</h1>
+    </div>
+    <div class="card-content p-2">
+        <div>
+            <h4>movie</h4>
+            
+            <dl class="row">
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Title)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Title)
+                </dd>
+            </dl>
+        </div>
+        <div>
+            <a asp-action="Edit" asp-route-id="@Model?.MovieId">Edit</a> 
+
+        </div>
+    </div>
+    <div class="card-footer">
+        <a asp-action="Index">Back to List</a>
+    </div>
+</div>
